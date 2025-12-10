@@ -23,9 +23,17 @@
                 background: var(--color);
             }
             &:nth-child(2) {
-                background: hsl(from var(--color) h max(s, 30) clamp(40, l, 60));
+                background: hsl(from var(--color) h s 80%);
             }
-
+            &:nth-child(3) {
+                background: hsl(from var(--color) h s 20%);
+            }
+            &:nth-child(4) {
+                background: rgb(from var(--color) 255 g b );
+            }
+            &:nth-child(5) {
+                background: rgb(from var(--color) 0 g b);
+            }
         }
     }
 }

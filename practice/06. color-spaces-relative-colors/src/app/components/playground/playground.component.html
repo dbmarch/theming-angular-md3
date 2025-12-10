@@ -1,10 +1,16 @@
 <div class="colors" [style.--color]="selectedColor()">
     <div class="item">
-
     </div>
     <div class="item">
-        
+    </div>
+    <div class="item">
+    </div>
+    <div class="item">
+    </div><div class="item">
     </div>
 </div>
 
-<input type="color" [(ngModel)]="selectedColor" />
+<div>
+<label name="colorLabel">Choose color:</label>
+<input type="color" [(ngModel)]="selectedColor" name="colorLabel" />
+</div>
