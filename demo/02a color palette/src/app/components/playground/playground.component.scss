@@ -1,0 +1,40 @@
+:host {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border: 1px solid lightgray;
+    padding: 10px;
+    --color-1: lime;
+    --color-2: blue;
+
+    .colors {
+        display: flex;
+        flex-direction: row;
+        gap: 4px;
+
+        .item {            
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100px;
+            height: 100px;
+            border: 1px solid gray;  
+
+            --c-1: rgb(255 0 0);
+            --c-2: rgb(0 0 255);
+            --mix-rgb: rgb(128,0,128);
+            --mix-hsl: hsl(120 100 50 );
+                     
+            &.color-1 {
+                background: var(--color-1);
+            }
+            &.color-2 {
+                background: var(--color-2);
+            }
+
+            &.mix{
+                background: color-mix(in srgb, var(--color-1), var(--color-2) var(--value));
+            }
+        }
+    }
+}

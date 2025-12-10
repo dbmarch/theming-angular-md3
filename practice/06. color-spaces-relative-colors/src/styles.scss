@@ -15,21 +15,31 @@ body {
   padding: 0;
   box-sizing: border-box;
 
-  /* create '--p-10' - '--p-90' here */
-
-
+  --p-10: oklch(from var(--p-base) 0.92 0.07 h); 
+  --p-20: oklch(from var(--p-base) 0.90 0.10 h);
+  --p-30: oklch(from var(--p-base) 0.80 0.20 h);
+  --p-40: oklch(from var(--p-base) 0.72 0.25 h);
+  --p-50: oklch(from var(--p-base) 0.67 0.31 h);
+  --p-60: oklch(from var(--p-base) 0.50 0.27 h);
+  --p-70: oklch(from var(--p-base) 0.35 0.25 h);
+  --p-80: oklch(from var(--p-base) 0.25 0.20 h);
+  --p-90: oklch(from var(--p-base) 0.13 0.20 h);
 }
 
 :root {
-  --base-color: rgb(58, 81, 158);
+  --base-color: rgb(58, 158, 83);
 
+  --p-base: oklch(from var(--base-color) 0.67 0.31 h);
   /* Create '--p-base' here */
+  // color-scheme: light dark;
 }
 
 .pal-1 {
   /* Create alternative '--p-base' here by playing with the hue of the base color */
+  --p-base: oklch(from var(--base-color) 0.67 0.31 calc(h + 100));
 }
 
 .pal-2 {
   /* Create another alternative '--p-base' here by playing with the hue of the base color */
+  --p-base: oklch(from var(--base-color) 0.67 0.31 calc(h - 100));
 }
