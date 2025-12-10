@@ -1,10 +1,21 @@
 :host {
+
+  --shadow-offset: 2px;
+
   background: #abcce2;
   color: #4a4a4a;
   padding: 1rem;
   border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--shadow-offset) var(--shadow-offset) var(--shadow-offset) rgba(0, 0, 0, 0.3);
   text-align: center;
+
+  // &:hover {
+  //   box-shadow: 6px 6px 4px rgba(0, 0, 0, 0.3);
+  // }
+  &:hover {
+    --shadow-offset: 12px;
+  }
+
 
   .card-image {
     width: 100%;
@@ -13,7 +24,7 @@
   }
 
   button {
-    background: #1565c0;
+    background: var(--primary-color);
     color: white;
     border: none;
     border-radius: 4px;
