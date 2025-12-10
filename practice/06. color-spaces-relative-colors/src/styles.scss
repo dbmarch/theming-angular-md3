@@ -1,0 +1,35 @@
+/* You can add global styles to this file, and also import other style files */
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  /* create '--p-10' - '--p-90' here */
+
+
+}
+
+:root {
+  --base-color: rgb(58, 81, 158);
+
+  /* Create '--p-base' here */
+}
+
+.pal-1 {
+  /* Create alternative '--p-base' here by playing with the hue of the base color */
+}
+
+.pal-2 {
+  /* Create another alternative '--p-base' here by playing with the hue of the base color */
+}

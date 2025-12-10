@@ -1,0 +1,50 @@
+:host {
+    display: flex;
+    flex-direction: column;
+
+
+    mat-toolbar {
+        .example-spacer {
+            flex: 1 1 auto;
+        }
+    }
+
+    h1 {
+        color: var(--mat-sys-primary);
+        font: var(--mat-sys-headline-medium);
+        margin: 0 1rem;
+        
+    }
+
+    .btw {
+        background: var(--mat-sys-primary-container);
+        font: var(--mat-sys-body-medium);
+        border: 1px solid var(--mat-sys-on-primary-container);
+        color: var(--mat-sys-on-primary-container);
+        margin: 0.5rem;
+        padding: 0 0.5rem;
+
+    }
+
+    .cards {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding: 2rem;
+        gap: 2rem;
+
+
+        mat-card {
+            width: 300px;
+
+            img[mat-card-image] {
+                height: 240px;
+                object-fit: cover;
+            }
+
+            p {
+                margin: 1rem 0;
+            }
+        }
+    }
+}

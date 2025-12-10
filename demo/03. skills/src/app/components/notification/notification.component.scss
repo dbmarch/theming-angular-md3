@@ -1,0 +1,47 @@
+:host {
+  display: flex;
+  padding: 16px;
+  border: 1px solid var(--p-20);
+  border-left: 5px solid var(--p-60);
+  border-radius: 6px;
+  background-color: var(--p-10);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  align-items: flex-start;
+  gap: 12px;
+
+  .notification-content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+
+    .notification-message {
+      font-size: 1rem;
+      font-weight: 500;
+      color: var(--p-60);
+      line-height: 1.4;
+    }
+
+    .notification-timestamp {
+      font-size: 0.85rem;
+      color: var(--p-40);
+    }
+  }
+
+  &.info {
+    --base: blue;
+  }
+
+  &.warning {
+    --base: yellow;
+  }
+
+  &.error {
+    --base: red;
+  }
+
+
+  &.success {
+    --base: green;
+  }
+}

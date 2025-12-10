@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Compiled CSS Output</title>
+
+    <!-- Prism.js for syntax highlighting -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" rel="stylesheet" />
+</head>
+<body>
+    <a href="./test.html">Try the css</a>
+    <h1>CSS Code:</h1>
+    <pre><code id="css-output" class="language-css">Loading CSS...</code></pre>
+
+    <!-- Prism.js library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-css.min.js"></script>
+    <script src="scripts.js"></script>
+
+    <script>
+        connectWebSocket(() => loadCss('css-output'));
+    </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+@if (author(); as currentAuthor) {
+    <div class="container">
+        <div class="author-section">
+            <app-author-card [author]="currentAuthor" />
+        </div>
+
+        @if (authorPosts(); as posts) {
+            <div class="posts-section">
+                <div class="posts-grid">
+                    @for (post of posts; track post.id) {
+                        <app-post-card [post]="post" />
+                    }
+                </div>
+            </div>
+        }
+        <button class="back-button" routerLink="/home">
+            <span class="symbol">←</span>
+            Back to Posts
+        </button>
+
+    </div>
+} @else {
+    <div class="container">
+        <p>Author not found</p>
+        <button class="back-button" routerLink="/home">
+            <span class="symbol">←</span>
+            Back to Posts
+        </button>
+    </div>
+} 

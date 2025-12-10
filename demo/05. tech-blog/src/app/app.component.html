@@ -1,0 +1,45 @@
+<nav class="main-nav">
+    <div class="nav-content">
+        <div class="nav-left">
+            <a routerLink="/home" class="logo">Tech Blog</a>
+        </div>
+        <div class="nav-right">
+            <div class="theme-controls">
+                <select class="theme-select" title="Select color theme"
+                    #colorSelect
+                    [value]="themeService.selectedColor().name"
+                    (change)="themeService.setColor(colorSelect.value)"
+                >
+                    @for(option of themeService.possibleColors; track option.name) {
+                        <option [value]="option.name">{{option.name}}</option>
+                    }
+                </select>
+                <div class="mode-select">
+                    <button class="mode-button" title="Light mode"
+                        [class.active]="themeService.selectedScheme().name === 'Light'"
+                        (click)="themeService.setScheme('Light')"
+                    >☀️</button>
+                    <button class="mode-button" title="System mode" 
+                        [class.active]="themeService.selectedScheme().name === 'System'" 
+                        (click)="themeService.setScheme('System')"   
+
+                    >💻</button>
+                    <button class="mode-button" title="Dark mode"
+                        [class.active]="themeService.selectedScheme().name === 'Dark'" 
+                        (click)="themeService.setScheme('Dark')"
+                    >🌙</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<main>
+    <router-outlet></router-outlet>
+</main>
+
+<footer class="main-footer">
+    <div class="footer-content">
+        <p>&copy; 2025 Tech Blog. All rights reserved.</p>
+    </div>
+</footer>

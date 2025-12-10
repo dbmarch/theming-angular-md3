@@ -1,0 +1,38 @@
+:host {
+    display: block;
+
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 2rem;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+
+        .author-section {
+            margin-bottom: 2rem;
+        }
+
+        .posts-section {
+            .posts-grid {
+                display: grid;
+                gap: 2rem;
+                grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+
+                .no-posts {
+                    text-align: center;
+                    color: var(--n-70);
+                    font-size: 1.1rem;
+                    padding: 2rem;
+                    grid-column: 1 / -1;
+                }
+            }
+        }
+
+        .actions {
+            margin-top: 2rem;
+            text-align: center;
+        }
+    }
+}
+

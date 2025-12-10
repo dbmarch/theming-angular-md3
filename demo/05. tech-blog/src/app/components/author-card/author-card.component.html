@@ -1,0 +1,8 @@
+@let currentAuthor = author();
+<div class="author-card" [routerLink]="clickable() ? ['/author', currentAuthor.id] : null" [class.clickable]="clickable()">
+    <img [src]="currentAuthor.avatar" [alt]="currentAuthor.name" class="author-avatar">
+    <div class="author-info">
+        <h3>{{ currentAuthor.name }}</h3>
+        <p>{{ currentAuthor.bio }}</p>
+    </div>
+</div> 

@@ -1,0 +1,30 @@
+@let currentPost = post();
+<article class="post-card">
+    <div class="post-link" [routerLink]="['/post', currentPost.id]">
+        <div class="image-container">
+            <img [src]="currentPost.imageUrl" [alt]="currentPost.title" class="post-image">
+            <app-fav-button [isFavorite]="currentPost.isFavorite" class="favorite-button" />
+        </div>
+        <div class="post-content">
+            <h2>{{ currentPost.title }}</h2>
+            <p class="post-summary">{{ currentPost.summary }}</p>
+            <div class="post-meta">
+                <span class="author">
+                    <span class="symbol">👤</span>
+                    {{ currentPost.author.name }}
+                </span>
+                <span class="date">
+                    <span class="symbol">📅</span>
+                    {{ currentPost.publishDate | date:'mediumDate' }}
+                </span>
+                <span class="read-time">
+                    <span class="symbol">⏱️</span>
+                    {{ currentPost.readTime }} min read
+                </span>
+            </div>
+        </div>
+    </div>
+    <div class="post-tags" (click)="$event.stopPropagation()">
+        <app-tag-list [tags]="currentPost.tags" />
+    </div>
+</article> 

@@ -1,0 +1,29 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 20px;
+  padding: 20px;
+  background: radial-gradient(#a6c5e9, #1565c1, #a6c5e9);
+  
+
+  .content {
+    display: flex;
+    flex-direction: row;    
+    flex: 1;
+    background-color: white;
+    box-shadow: 4px 8px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 16px;
+    overflow: hidden;
+
+    main {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 1rem;
+      padding: 1rem;
+      background: #f4f4f4;
+      flex: 1;
+      align-content: start;
+    }
+  }
+}

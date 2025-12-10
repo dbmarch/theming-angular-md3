@@ -1,0 +1,21 @@
+:host {
+  background: var(--primary-color);
+  padding: 1rem;
+  width: 200px;
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+  li {
+    color: white;
+    padding: 4px;
+    cursor: pointer;
+
+    &:hover {
+      background: linear-gradient(to right, var(--primary-color), #3d84b4);    }
+
+    &.current {
+      background: linear-gradient(to right, var(--primary-color), #abcce2);
+    }
+  }
+}

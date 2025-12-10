@@ -1,0 +1,12 @@
+<app-toolbar/>
+<div class="items">
+    @for (activity of activities(); track activity.id) {
+        <app-activity-card [activity]="activity"/>
+    }
+</div>
+
+<div class="notifications">
+    @for (notification of notifications(); track notification.id) {
+        <app-notification [notification]="notification"/>
+    }
+</div>

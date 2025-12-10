@@ -1,0 +1,40 @@
+:host {
+  background-color: rgb(189, 189, 189);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 24px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+  .toolbar-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: rgb(66, 66, 66);
+  }
+
+  .toolbar-nav {
+    display: flex;
+    gap: 16px;
+
+    .nav-item {
+      font-size: 1rem;
+      text-decoration: none;
+      padding: 8px 16px;
+      border-radius: 4px;
+      color: rgb(97, 97, 97);
+      background-color: rgb(245, 245, 245);
+      transition: background-color 0.3s, color 0.3s;
+      cursor: pointer;
+
+      &:hover {
+        background-color: rgb(117, 117, 117);
+        color: rgb(245, 245, 245);
+      }
+
+      &:active {
+        background-color: rgb(66, 66, 66);
+        color: rgb(245, 245, 245);
+      }
+    }
+  }
+}

@@ -1,0 +1,10 @@
+@use "colors";
+@forward "colors";
+
+@mixin button {
+  .button {
+    padding: 10px 20px;
+    background-color: colors.$primary-color;
+    color: white;
+  }
+}

@@ -1,0 +1,40 @@
+
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@use '@angular/material' as mat;
+@use 'hari-theme';
+@use 'theme';
+@import './app/styles/kobi-theme.css';
+
+html, body { height: 100%; }
+body { 
+  color-scheme: light;
+  padding: 1rem;
+  font-family: Roboto, "Helvetica Neue", sans-serif; 
+  background: var(--mat-sys-background);
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  @include theme.go((
+    color: mat.$azure-palette, 
+    typography: Roboto, 
+    density: 0
+  ));
+
+  --sys-density-padding: var(--mat-form-field-container-vertical-padding, 16px);
+}
+
+.theme-2 {
+  @include theme.go((
+    color: (
+      primary: hari-theme.$primary-palette,
+      tertiary:hari-theme.$tertiary-palette,
+    )
+  ))
+}

@@ -1,0 +1,116 @@
+:host {
+  display: block;
+
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+
+    .post {
+      background: var(--n-0);
+      border-radius: 8px;
+      box-shadow: 0 2px 8px var(--shadow-medium);
+      overflow: hidden;
+
+      .post-header {
+        padding: 2rem;
+
+        h1 {
+          font-size: 2.5rem;
+          color: var(--n-90);
+          margin-bottom: 1.5rem;
+          line-height: 1.2;
+        }
+
+        .post-meta {
+          display: flex;
+          flex-direction: column;
+          gap: 1.5rem;
+
+          @media (min-width: 768px) {
+            flex-direction: row;
+            align-items: center;
+          }
+
+          .meta-left {
+            flex: 1;
+          }
+
+          .meta-right {
+            display: flex;
+            justify-content: flex-end;
+
+            .post-info {
+              display: flex;
+              gap: 1.5rem;
+              color: var(--n-70);
+              font-size: 0.9rem;
+              padding: 0.5rem 1rem;
+              background: var(--n-10);
+              border-radius: 8px;
+
+              .info-item {
+                display: flex;
+                align-items: center;
+                gap: 0.5rem;
+
+                .symbol {
+                  font-size: 1rem;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .post-image {
+        width: 100%;
+        max-height: 400px;
+        object-fit: cover;
+      }
+
+      .post-content {
+        padding: 2rem;
+        line-height: 1.8;
+        color: var(--n-80);
+        font-size: 1.1rem;
+      }
+
+      .post-footer {
+        padding: 1.5rem 2rem;
+        border-top: 1px solid var(--n-30);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .engagement {
+          display: flex;
+          gap: 1.5rem;
+
+          span {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--n-70);
+
+            .symbol {
+              font-size: 1rem;
+            }
+          }
+        }
+      }
+    }
+
+    .actions {
+      margin-top: 2rem;
+      text-align: center;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .post-meta {
+    flex-direction: row;
+    align-items: center;
+  }
+}

@@ -1,0 +1,6 @@
+@let currentTags = tags();
+<div class="tag-list">
+    @for (tag of currentTags; track tag) {
+        <a class="tag" [routerLink]="['/topic', tag]">{{ tag }}</a>
+    }
+</div> 

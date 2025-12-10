@@ -1,0 +1,17 @@
+{
+  "name": "fun-with-scss",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "compile": "sass --watch scss:public --no-source-map && touch public/index.html",
+    "serve": "live-server public --no-browser",
+    "start": "concurrently \"npm run compile\" \"npm run serve\""
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^9.1.2",
+    "live-server": "^1.2.2",
+    "sass": "^1.85.0"
+  }
+}

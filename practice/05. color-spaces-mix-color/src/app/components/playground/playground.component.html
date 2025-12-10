@@ -1,0 +1,10 @@
+<div class="tools">
+    <input type="range" min="0" max="100" [(ngModel)]="value"/>
+    {{value()}}
+
+</div>
+<div class="colors" [style.--value.%]="value()">
+    <div class="item color-1">Color 1</div>
+    <div class="item mix">Mix</div>
+    <div class="item color-2">Color 2</div>
+</div>

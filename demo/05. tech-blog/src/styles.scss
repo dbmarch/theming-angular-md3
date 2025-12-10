@@ -1,0 +1,51 @@
+@use 'common-buttons' as btn;
+@use 'syntax-highlight' as stx;
+@use 'theme';
+@use 'levels';
+
+@include btn.go;
+@include stx.go;
+@include theme.color-system(levels.$gray-levels, levels.$primary-levels, levels.$accent-levels);
+
+.theme-2 {
+  @include theme.create(
+    $primary: purple, 
+    $accent: orange, 
+    $scheme: dark);
+}
+
+.theme-3 {
+  @include theme.create(
+    $primary: green, 
+    $accent: brown, 
+    $scheme: light);
+}
+
+:root {
+
+  @include theme.create(
+    $primary: blue, 
+    $accent: pink, 
+    $scheme: light);
+
+
+  // Shadows
+  --shadow-light: rgba(0, 0, 0, 0.05);
+  --shadow-medium: rgba(0, 0, 0, 0.1);
+  --shadow-dark: rgba(0, 0, 0, 0.15);
+
+  // Special colors
+  --foreground-translucent: rgb(from var(--n-0)r g b / 0.6);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  
+}
+

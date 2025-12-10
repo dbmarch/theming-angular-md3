@@ -1,0 +1,35 @@
+:host {
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+
+    .topic-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 2rem;
+
+      h1 {
+        font-size: 2rem;
+        color: var(--n-90);
+        margin: 0;
+      }
+    }
+
+    .posts-grid {
+      display: grid;
+      gap: 2rem;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+
+      .no-posts {
+        text-align: center;
+        color: var(--n-70);
+        font-size: 1.1rem;
+        padding: 2rem;
+        grid-column: 1 / -1;
+      }
+    }
+  }
+}
+

@@ -1,0 +1,85 @@
+/* You can add global styles to this file, and also import other style files */
+body, html {
+    height: 100%;
+    width: 100%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+    --gry-01: oklch(99% 0 0);
+    --gry-02: oklch(93% 0 0);
+    --gry-03: oklch(82% 0 0);
+    --gry-04: oklch(72% 0 0);
+    --gry-05: oklch(67% 0 0);
+    --gry-06: oklch(50% 0 0);
+    --gry-07: oklch(42% 0 0);
+    --gry-08: oklch(33% 0 0);
+    --gry-09: oklch(20% 0 0);
+    --gry-10: oklch(09% 0 0);
+
+    --clr-01: oklch(from var(--base) 99% 0.02 h);
+    --clr-02: oklch(from var(--base) 93% 0.04 h);
+    --clr-03: oklch(from var(--base) 82% 0.07 h);
+    --clr-04: oklch(from var(--base) 72% 0.10 h);
+    --clr-05: oklch(from var(--base) 67% 0.14 h);
+    --clr-06: oklch(from var(--base) 50% 0.10 h);
+    --clr-07: oklch(from var(--base) 42% 0.08 h);
+    --clr-08: oklch(from var(--base) 33% 0.05 h);
+    --clr-09: oklch(from var(--base) 20% 0.03 h);
+    --clr-10: oklch(from var(--base) 09% 0.01 h);
+
+    --p-05: light-dark(var(--clr-01), var(--clr-10));
+    --p-10: light-dark(var(--clr-02), var(--clr-09));
+    --p-20: light-dark(var(--clr-03), var(--clr-08));
+    --p-30: light-dark(var(--clr-04), var(--clr-07));
+    --p-40: light-dark(var(--clr-05), var(--clr-06));
+    --p-50: light-dark(var(--clr-06), var(--clr-05));
+    --p-60: light-dark(var(--clr-07), var(--clr-04));
+    --p-70: light-dark(var(--clr-08), var(--clr-03));
+    --p-80: light-dark(var(--clr-09), var(--clr-02));
+    --p-90: light-dark(var(--clr-10), var(--clr-01));
+
+    --n-05: light-dark(var(--gry-01), var(--gry-10));
+    --n-10: light-dark(var(--gry-02), var(--gry-09));
+    --n-20: light-dark(var(--gry-03), var(--gry-08));
+    --n-30: light-dark(var(--gry-04), var(--gry-07));
+    --n-40: light-dark(var(--gry-05), var(--gry-06));
+    --n-50: light-dark(var(--gry-06), var(--gry-05));
+    --n-60: light-dark(var(--gry-07), var(--gry-04));
+    --n-70: light-dark(var(--gry-08), var(--gry-03));
+    --n-80: light-dark(var(--gry-09), var(--gry-02));
+    --n-90: light-dark(var(--gry-10), var(--gry-01));
+}
+
+
+:root {
+  --base: rgb(105, 14, 141);
+  color-scheme: light dark;
+}
+
+
+::-webkit-scrollbar {
+    width: 6px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    margin: 4px 0px;
+    background: var(--n-20);
+    border-radius: 3px;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: var(--p-30);
+    border-radius: 3px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--p-40);
+  }

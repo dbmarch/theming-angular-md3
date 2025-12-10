@@ -1,0 +1,15 @@
+@let vm = activity();
+<div class="card-header">
+  <h2 class="title">{{ vm.title }}</h2>
+  <span class="badge">{{ vm.difficulty }}</span>
+</div>
+<div class="card-body">
+  <p class="description">{{ vm.description }}</p>
+  <div class="details">
+    <p><strong>Duration:</strong> {{ vm.duration }}</p>
+    <p><strong>Location:</strong> {{ vm.location }}</p>
+  </div>
+</div>
+<div class="card-footer">
+  <button class="action-button">Learn More</button>
+</div>

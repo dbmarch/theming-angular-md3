@@ -1,0 +1,97 @@
+@use "@angular/material" as mat;
+
+:host {
+  display: flex;
+  flex-direction: column;
+
+  mat-toolbar {
+    font: var(--mat-sys-label-large);
+    .example-spacer {
+      flex: 1 1 auto;
+    }
+
+    @include mat.toolbar-overrides(
+      (
+        container-background-color: var(--mat-sys-primary-container),
+        container-text-color: var(--mat-sys-primary),
+      )
+    );
+
+    @include mat.icon-overrides(
+      (
+        color: var(--mat-sys-primary),
+      )
+    );
+  }
+
+  h1 {
+    color: var(--mat-sys-primary);
+    font: var(--mat-sys-headline-large);
+    margin: 0 1rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+
+    mat-icon {
+    }
+  }
+
+  .btw {
+    background: var(--mat-sys-primary-container);
+    font: var(--mat-sys-body-medium);
+    border: 1px solid var(--mat-sys-on-primary-container);
+    color: var(--mat-sys-on-primary-container);
+    margin: 0.5rem;
+    padding: 0 0.5rem;
+
+
+    // --mat-sys-primary-container: pink;
+    @include mat.theme-overrides(
+      (
+        primary-container: salmon,
+        on-primary-container: oklch(from salmon 20% c h),
+      )
+    );
+  }
+
+  .cards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 2rem;
+    gap: 2rem;
+
+    color: var(--mat-sys-secondary);
+
+    @include mat.card-overrides(
+      (
+        subtitle-text-color: var(--mat-sys-tertiary),
+        elevated-container-color: var(--mat-sys-primary-fixed),
+      )
+    );
+
+    mat-card {
+      width: 300px;
+
+      mat-icon[mat-card-avatar] {
+        // --mat-icon-color: var(--mat-sys-primary);
+        @include mat.icon-overrides(
+          (
+            color: var(--mat-sys-tertiary),
+          )
+        );
+      }
+
+      img[mat-card-image] {
+        height: 240px;
+        object-fit: cover;
+      }
+
+      p {
+        margin: 1rem 0;
+        color: var(--mat-sys-on-primary-fixed);
+      }
+    }
+  }
+}

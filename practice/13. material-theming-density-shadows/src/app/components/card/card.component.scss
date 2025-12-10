@@ -1,0 +1,26 @@
+:host {
+    padding: 1rem;
+    border-radius: 0.5rem;
+    background-color: var(--mat-sys-secondary-container);
+    border: 1px solid var(--mat-sys-on-secondary-container);
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+
+    h1 {
+        font: var(--mat-sys-headline-medium);
+        color: var(--mat-sys-on-primary-container);
+    }
+
+    p {
+        font: var(--mat-sys-body-medium);
+        color: var(--mat-sys-on-secondary-container);
+    }
+
+    .actions {
+        display: flex;
+        flex-direction: row;
+        gap: 0.5rem;
+        justify-content: flex-end;
+    }
+}

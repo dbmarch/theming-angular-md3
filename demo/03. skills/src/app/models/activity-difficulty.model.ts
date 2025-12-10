@@ -1,0 +1,1 @@
+export type ActivityDifficulty = 'Novice' | 'Intermediate' | 'Advanced' | 'Expert';

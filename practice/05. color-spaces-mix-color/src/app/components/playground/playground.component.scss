@@ -1,0 +1,36 @@
+:host {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border: 1px solid lightgray;
+    padding: 10px;
+    --color-1: red;
+    --color-2: blue;
+
+    .colors {
+        display: flex;
+        flex-direction: row;
+        gap: 4px;
+
+        .item {            
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100px;
+            height: 100px;
+            border: 1px solid gray;  
+                        
+
+            &.color-1 {
+                background: var(--color-1);
+            }
+            &.color-2 {
+                background: var(--color-2);
+            }
+
+            &.mix {
+                background: color-mix(in srgb, var(--color-1), var(--color-2) var(--value));
+            }
+        }
+    }
+}
