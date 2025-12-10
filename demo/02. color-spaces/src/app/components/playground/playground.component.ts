@@ -9,6 +9,8 @@ import { FormsModule } from '@angular/forms';
 })
 export class PlaygroundComponent {  
   readonly selectedColor = signal('blue');
+  readonly value = signal(50);
+  
 
 
 }

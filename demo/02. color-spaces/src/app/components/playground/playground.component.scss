@@ -4,6 +4,8 @@
     gap: 10px;
     border: 1px solid lightgray;
     padding: 10px;
+    --color-1: lime;
+    --color-2: blue;
 
     .colors {
         display: flex;
@@ -17,15 +19,17 @@
             width: 100px;
             height: 100px;
             border: 1px solid gray;  
-                        
-
-            &:nth-child(1) {
-                background: var(--color);
+                     
+            &.color-1 {
+                background: var(--color-1);
             }
-            &:nth-child(2) {
-                background: hsl(from var(--color) h max(s, 30) clamp(40, l, 60));
+            &.color-2 {
+                background: var(--color-2);
             }
 
+            &.mix{
+                background: color-mix(in srgb, var(--color-1), var(--color-2) var(--value));
+            }
         }
     }
 }
