@@ -19,6 +19,11 @@
             width: 100px;
             height: 100px;
             border: 1px solid gray;  
+
+            --c-1: rgb(255 0 0);
+            --c-2: rgb(0 0 255);
+            --mix-rgb: rgb(128,0,128);
+            --mix-hsl: hsl(120 100 50 );
                      
             &.color-1 {
                 background: var(--color-1);
