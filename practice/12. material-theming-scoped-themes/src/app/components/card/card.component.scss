@@ -6,12 +6,16 @@
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
+    box-shadow: var(--mat-sys-level3);
 
     h1 {
         font: var(--mat-sys-headline-medium);
         color: var(--mat-sys-on-primary-container);
     }
 
+    &:hover {
+        box-shadow: var(--mat-sys-level5);
+    }
     p {
         font: var(--mat-sys-body-medium);
         color: var(--mat-sys-on-secondary-container);

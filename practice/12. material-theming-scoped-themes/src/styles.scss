@@ -23,5 +23,20 @@ body {
     typography: Roboto, 
     density: 0
   ));
-
 }
+
+.theme-1 {
+  @include mat.theme((
+    color: mat.$green-palette,
+    typography: Roboto,
+    density: 0
+  ));
+} 
+
+.theme-2 {
+  @include mat.theme((
+    color: mat.$rose-palette,
+    typography: Roboto,
+    density: 0
+  ));
+} 
