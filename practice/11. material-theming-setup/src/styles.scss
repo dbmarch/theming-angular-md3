@@ -5,8 +5,11 @@
 
 html, body { height: 100%; }
 body { 
+  color-scheme: dark;
   padding: 1rem;
   font-family: Roboto, "Helvetica Neue", sans-serif; 
+  background-color: var(--mat-sys-surface);
+
 }
 
 * {
@@ -24,5 +27,4 @@ body {
     typography: Roboto,
     density: -2,
   ));
-  background-color: var(--mat-sys-surface);
 }
