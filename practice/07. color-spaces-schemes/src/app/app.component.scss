@@ -108,8 +108,15 @@
           }
     
       }   
-    }      
+    }
+
+ h2 {
+  color: yellow;
+ }
+
+ @media (prefers-color-scheme: light) {
+    h2 {
+      color: brown;
+    }   
   }
-
-  
-
+}
