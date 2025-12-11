@@ -1,5 +1,5 @@
 :host {
-    padding: 1rem;
+    padding: var(--sys-density-padding);
     border-radius: 0.5rem;
     background-color: var(--mat-sys-secondary-container);
     border: 1px solid var(--mat-sys-on-secondary-container);
