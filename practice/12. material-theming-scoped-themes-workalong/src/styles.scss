@@ -5,11 +5,10 @@
 
 html, body { height: 100%; }
 body { 
-  color-scheme: light-dark;
+  color-scheme: light;
   padding: 1rem;
   font-family: Roboto, "Helvetica Neue", sans-serif; 
-  background-color: var(--mat-sys-surface);
-
+  background: var(--mat-sys-background);
 }
 
 * {
@@ -20,12 +19,20 @@ body {
 
 :root {
   @include mat.theme((
-    color: (
-      primary: mat.$spring-green-palette,
-      tertiary: mat.$yellow-palette
-      // theme-type: light
-    ),
-    typography: Roboto,
-    density: -2,
+    color: mat.$azure-palette, 
+    typography: Roboto, 
+    density: 0
   ));
+}
+
+.theme-1 {
+  @include mat.theme((
+    color: mat.$spring-green-palette
+  ))
+}
+
+.theme-2 {
+  @include mat.theme((
+    color: mat.$rose-palette
+  ))
 }
