@@ -17,8 +17,12 @@ body {
 
 :root {
   @include mat.theme((
-    color: mat.$magenta-palette,
+    color: (
+      primary: mat.$spring-green-palette,
+      tertiary: mat.$yellow-palette,
+    ),
     typography: Roboto,
-    density: 0,
+    density: -2,
   ));
+  background-color: var(--mat-sys-surface);
 }
