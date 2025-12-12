@@ -1,11 +1,28 @@
+@use 'sass:color';
 @use 'sass:map';
 @use 'buttons';
 
 $my-color: green;
+$prop: 'margin';
+$theme: dark;
+$background: if ($theme == dark, black, white);
+@function double ($number) {
+    @return $number * 2;
+}
+$primary-color: color.scale($my-color, $lightness: 20%);
 
+
+@debug 'hello';
 @include buttons.button();
 
+:root{
+    --main-color: #{$my-color};
+}
+
 div.root {
+    --primary-color: #{$primary-color};
+    // background-color: $primary-color;
+    background-color: color-mix(in srgb, var(--primary-color), white 20%);
 }
 
 
@@ -14,25 +31,31 @@ h1 {
     border-bottom: 1px solid lime;
 }
 
+.test {
+    #{$prop}-top: 2px;
+    #{$prop}-bottom: 2px;
+    #{$prop}-left: 2px;
+    #{$prop}-right: 2px;
+}
+
+@debug $my-color;
+// $my-color: purple;
 
 section.shopping-list  {
-
     h3 {
         color: buttons.$primary-color;
     }
 
     ul {
         border: 1px solid gray;
-
         > li {
-            color: red;
-
+            color: #c0158d;
+@debug &;
             &:hover {
-                background-color: lightgray;
+                background-color:yellow;
             }
+
         }
+
     }
-} // end section.shopping-list
-
-
-
+}

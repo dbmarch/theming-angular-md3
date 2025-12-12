@@ -4,9 +4,25 @@
   color: white;
 }
 
+:root {
+  --main-color: green;
+}
+
+div.root {
+  --primary-color: rgb(0, 204.4, 0);
+  background-color: color-mix(in srgb, var(--primary-color), white 20%);
+}
+
 h1 {
   color: green;
   border-bottom: 1px solid lime;
+}
+
+.test {
+  margin-top: 2px;
+  margin-bottom: 2px;
+  margin-left: 2px;
+  margin-right: 2px;
 }
 
 section.shopping-list h3 {
@@ -16,8 +32,8 @@ section.shopping-list ul {
   border: 1px solid gray;
 }
 section.shopping-list ul > li {
-  color: red;
+  color: #c0158d;
 }
 section.shopping-list ul > li:hover {
-  background-color: lightgray;
+  background-color: yellow;
 }
