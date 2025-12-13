@@ -71,6 +71,50 @@ $primary-color: color.scale($my-color, $lightness: 20%);
 @debug 'hello';
 @include buttons.button();
 
+@mixin button-style ($color) {
+    background-color: $color;
+    color: white;
+    padding: 10px;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+
+    &:hover {
+        background-color: color.scale($color, $lightness: -10%);
+    }
+}
+
+@mixin all-buttons() {
+    $colors: (
+        primary: blue,
+        secondary: green,
+        error: red, 
+    );
+    @each $name, $color in $colors {
+        .button-#{$name} {
+            @include button-style($color);
+        }
+    }   
+}
+
+.my-class {
+    @include buttons.button();
+}
+
+@include all-buttons();
+
+// .button-primary {
+//     @include button-style(blue);
+// }
+
+// .button-secondary {
+//     @include button-style(green);
+// }
+
+// .button-error{
+//     @include button-style(red);
+// }
+
 
 $colors: (
     'primary': #6200ee,

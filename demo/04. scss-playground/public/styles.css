@@ -80,6 +80,48 @@
   color: white;
 }
 
+.my-class .button {
+  padding: 10px 20px;
+  background-color: navy;
+  color: white;
+}
+
+.button-primary {
+  background-color: blue;
+  color: white;
+  padding: 10px;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+}
+.button-primary:hover {
+  background-color: rgb(0, 0, 229.5);
+}
+
+.button-secondary {
+  background-color: green;
+  color: white;
+  padding: 10px;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+}
+.button-secondary:hover {
+  background-color: rgb(0, 115.2, 0);
+}
+
+.button-error {
+  background-color: red;
+  color: white;
+  padding: 10px;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+}
+.button-error:hover {
+  background-color: rgb(229.5, 0, 0);
+}
+
 :root {
   --color-primary: #6200ee;
   --color-secondary: #03dac6;
