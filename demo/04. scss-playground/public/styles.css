@@ -1,3 +1,79 @@
+.text2-small {
+  font-size: 12px;
+}
+
+.text2-medium {
+  font-size: 16px;
+}
+
+.text2-large {
+  font-size: 24px;
+}
+
+.text-small {
+  font-size: 12px;
+}
+
+.text-medium {
+  font-size: 18px;
+}
+
+.text-large {
+  font-size: 24px;
+}
+
+.m-0 {
+  margin: 0;
+}
+
+.p-0 {
+  padding: 0;
+}
+
+.m-4px {
+  margin: 4px;
+}
+
+.p-4px {
+  padding: 4px;
+}
+
+.m-8px {
+  margin: 8px;
+}
+
+.p-8px {
+  padding: 8px;
+}
+
+.m-16px {
+  margin: 16px;
+}
+
+.p-16px {
+  padding: 16px;
+}
+
+.textred {
+  color: red;
+}
+
+.textgreen {
+  color: green;
+}
+
+.textblue {
+  color: blue;
+}
+
+.textpurple {
+  color: purple;
+}
+
+.textyellow {
+  color: yellow;
+}
+
 .button {
   padding: 10px 20px;
   background-color: navy;
@@ -5,7 +81,9 @@
 }
 
 :root {
-  --main-color: green;
+  --color-primary: #6200ee;
+  --color-secondary: #03dac6;
+  --color-danger: red;
 }
 
 div.root {

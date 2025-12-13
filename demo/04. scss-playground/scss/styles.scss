@@ -1,8 +1,64 @@
 @use 'sass:color';
 @use 'sass:map';
+@use 'sass:list';
 @use 'buttons';
 
+
+
+$font-sizes:('small': 12px, 'medium': 16px, 'large': 24px);
+
+
+$medium-size: map.get($font-sizes, 'medium');
+@debug $medium-size;
+$modified-sizes: map.set($font-sizes, 'medium', 18px);
+$more-sizes: ('x-large': 32px, 'xx-large': 48px);
+$all-sizes: map-merge($font-sizes, $more-sizes);
+
+
+// @debug $font-sizes;
+
+@each $name, $size in $font-sizes {
+    .text2-#{$name} {
+        font-size: $size;
+    }
+}
+
+@each $name, $size in $modified-sizes {
+    .text-#{$name} {
+        font-size: $size;
+    }
+}
+@function generate-spacings($unit) {
+    @return (0 , $unit, 2 * $unit, 4 * $unit);
+}
+
+$spacings: generate-spacings(4px);
+
+// @debug $spacings;
+
+@each $size in $spacings {
+    .m-#{$size} {
+        margin: $size;
+    }   
+
+    .p-#{$size} {
+        padding: $size;
+    }
+}
 $my-color: green;
+$colors: ( red, green, blue, purple, yellow );
+$first-color: list.nth($colors, 1);
+$last-color: list.nth($colors, -1);
+@debug list.index($colors, purple);
+@debug $first-color;
+@debug last-color
+ $last-color;
+@each $color in $colors {
+    #{'.text'+$color} {
+        color: $color;
+    }
+}   
+
 $prop: 'margin';
 $theme: dark;
 $background: if ($theme == dark, black, white);
@@ -15,8 +71,19 @@ $primary-color: color.scale($my-color, $lightness: 20%);
 @debug 'hello';
 @include buttons.button();
 
+
+$colors: (
+    'primary': #6200ee,
+    'secondary': #03dac6,
+    'danger': red,
+);
+
+
 :root{
-    --main-color: #{$my-color};
+    // --main-color: #{$my-color};
+    @each $name, $color in $colors {
+        --color-#{$name}: #{$color};
+    }
 }
 
 div.root {
