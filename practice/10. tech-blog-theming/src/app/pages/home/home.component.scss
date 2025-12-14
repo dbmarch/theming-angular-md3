@@ -1,4 +1,7 @@
 :host {
+  .my-div {
+    background-color: var(--color-primary-80);
+  }
   .container {
     max-width: 1200px;
     margin: 0 auto;
