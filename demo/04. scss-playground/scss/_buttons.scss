@@ -1,6 +1,14 @@
 @use "colors";
 @forward "colors";
 
+
+// This file is a partial file.
+// The filename starts with an underscore.
+
+// Every thing with preceding underscore is considered partial and will not be compiled to a css file
+$_my-local-color: orange;
+
+
 @mixin button {
   .button {
     padding: 10px 20px;
@@ -8,3 +16,11 @@
     color: white;
   }
 }
+
+// In your partial files, use mixins and try not to generate css like this:
+// .button {
+//   padding: 10px 20px;
+//   background-color: colors.$primary-color;
+//   color: white;
+// }
+

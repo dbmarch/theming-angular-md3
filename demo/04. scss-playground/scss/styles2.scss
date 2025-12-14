@@ -1,0 +1,26 @@
+@use 'sass:map';
+@use 'buttons';
+
+$my-color: green;
+
+
+h1 {
+   color: $my-color;
+   border-bottom: 1px solid lime;
+}
+
+@include buttons.button;
+
+section.shopping-list {
+   h3 {
+         color: buttons.$primary-color;
+         border-bottom: 1px solid lime;
+   }
+
+   ul {
+         color: red;
+         &:hover {
+               background-color: lightgray;
+         }
+   }
+}
