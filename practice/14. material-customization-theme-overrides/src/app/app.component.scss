@@ -1,6 +1,13 @@
+@use '@angular/material' as mat;
+
 :host {
     display: flex;
     flex-direction: column;
+
+    @include mat.theme-overrides((
+        primary: pink,
+        on-primary-container: darken(pink, 25%)
+    ));
 
 
     mat-toolbar {
