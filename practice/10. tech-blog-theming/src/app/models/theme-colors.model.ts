@@ -5,8 +5,8 @@ export interface ThemeColors {
 }
 
 export const THEME_COLORS: ThemeColors[] = [
+   { primary: 'red', accent: 'cyan', name: 'Red & Cyan'},
    { primary: 'blue', accent: 'pink', name: 'Blue & Pink'},
    { primary: 'purple', accent: 'orange', name: 'Purple & Orange'},
    { primary: 'green', accent: 'brown', name: 'Green & Brown'},
-   { primary: 'red', accent: 'cyan', name: 'Red & Cyan'},
 ]  

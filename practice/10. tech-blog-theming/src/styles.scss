@@ -8,27 +8,12 @@
 @include theme.color-system(levels.$gray-levels, levels.$primary-levels, levels.$accent-levels);
 
 
-
-.theme-2 {
-  @include theme.create(
-      $primary: purple,
-      $accent: orange,
-      $scheme: light-dark);
-  }
-
-.theme-3 {
-  @include theme.create(
-      $primary: green,
-      $accent: brown,
-      $scheme: light-dark);
-  }
-
 :root {
   // theme parameters
    @include theme.create(
       $primary: oklch(0.75 0.162 232), 
       $accent: oklch(0.80 0.25 12), 
-      $scheme: light-dark);
+      $scheme: dark);
 
   // Shadows
   --shadow-light: rgba(0, 0, 0, 0.05);
