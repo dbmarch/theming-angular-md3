@@ -7,6 +7,22 @@
 @include stx.go;
 @include theme.color-system(levels.$gray-levels, levels.$primary-levels, levels.$accent-levels);
 
+
+
+.theme-2 {
+  @include theme.create(
+      $primary: purple,
+      $accent: orange,
+      $scheme: light-dark);
+  }
+
+.theme-3 {
+  @include theme.create(
+      $primary: green,
+      $accent: brown,
+      $scheme: light-dark);
+  }
+
 :root {
   // theme parameters
    @include theme.create(
