@@ -1,9 +1,17 @@
+@use 'common-buttons' as btn;
+@use 'syntax-highlight' as stx;
+@use 'theme';
+
+@include btn.go;
+@include stx.go;
+@include theme.color-system;
+
 :root {
   // theme parameters
-  --theme-primary: oklch(0.75 0.162 232);  // Main blue
-  --theme-accent: oklch(0.80 0.25 12);    // Medium pink
-    color-scheme: light;
-
+   @include theme.create(
+      $primary: oklch(0.75 0.162 232), 
+      $accent: oklch(0.80 0.25 12), 
+      $scheme: light);
 
   // Shadows
   --shadow-light: rgba(0, 0, 0, 0.05);
@@ -22,170 +30,68 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-  --color-gray-0: white;
-  --color-gray-10: oklch(0.95 0 0);   // Lightest gray
-  --color-gray-20: oklch(0.90 0 0);   // Lighter gray
-  --color-gray-30: oklch(0.85 0 0);   // Light gray
-  --color-gray-40: oklch(0.80 0 0);   // Gray
-  --color-gray-50: oklch(0.77 0 0);   // Medium gray
-  --color-gray-60: oklch(0.65 0 0);   // Dark gray
-  --color-gray-70: oklch(0.55 0 0);   // Darker gray
-  --color-gray-80: oklch(0.45 0 0);   // Very dark gray
-  --color-gray-90: oklch(0.35 0 0);   // Darkest gray
-  --color-gray-100: black;
+     --color-gray-0: white;
+   --color-gray-10: oklch(0.95 0 0);   // Lightest gray
+   --color-gray-20: oklch(0.90 0 0);   // Lighter gray
+   --color-gray-30: oklch(0.85 0 0);   // Light gray
+   --color-gray-40: oklch(0.80 0 0);   // Gray
+   --color-gray-50: oklch(0.77 0 0);   // Medium gray
+   --color-gray-60: oklch(0.65 0 0);   // Dark gray
+   --color-gray-70: oklch(0.55 0 0);   // Darker gray
+   --color-gray-80: oklch(0.45 0 0);   // Very dark gray
+   --color-gray-90: oklch(0.35 0 0);   // Darkest gray
+   --color-gray-100: black;
 
-  --color-primary-10: oklch(from var(--theme-primary) 0.95 0.039 h );
-  --color-primary-20: oklch(from var(--theme-primary) 0.90 0.065 h );
-  --color-primary-30: oklch(from var(--theme-primary) 0.85 0.092 h );
-  --color-primary-40: oklch(from var(--theme-primary) 0.80 0.117 h );
-  --color-primary-50: oklch(from var(--theme-primary) 0.75 0.162 h );
-  --color-primary-60: oklch(from var(--theme-primary) 0.70 0.155 h );
-  --color-primary-70: oklch(from var(--theme-primary) 0.65 0.147 h );
-  --color-primary-80: oklch(from var(--theme-primary) 0.60 0.139 h );
-  --color-primary-90: oklch(from var(--theme-primary) 0.55 0.132 h );
+   --color-primary-10: oklch(from var(--theme-primary) 0.95 0.039 h );
+   --color-primary-20: oklch(from var(--theme-primary) 0.90 0.065 h );
+   --color-primary-30: oklch(from var(--theme-primary) 0.85 0.092 h );
+   --color-primary-40: oklch(from var(--theme-primary) 0.80 0.117 h );
+   --color-primary-50: oklch(from var(--theme-primary) 0.75 0.162 h );
+   --color-primary-60: oklch(from var(--theme-primary) 0.70 0.155 h );
+   --color-primary-70: oklch(from var(--theme-primary) 0.65 0.147 h );
+   --color-primary-80: oklch(from var(--theme-primary) 0.60 0.139 h );
+   --color-primary-90: oklch(from var(--theme-primary) 0.55 0.132 h );
 
-  --color-accent-10: oklch(from var(--theme-accent) 0.95 0.04 h );
-  --color-accent-20: oklch(from var(--theme-accent) 0.90 0.08 h );
-  --color-accent-30: oklch(from var(--theme-accent) 0.85 0.12 h );
-  --color-accent-40: oklch(from var(--theme-accent) 0.80 0.25 h );
-  --color-accent-50: oklch(from var(--theme-accent) 0.75 0.24 h );
-  --color-accent-60: oklch(from var(--theme-accent) 0.70 0.23 h );
-  --color-accent-70: oklch(from var(--theme-accent) 0.65 0.22 h );
-  --color-accent-80: oklch(from var(--theme-accent) 0.60 0.21 h );
-  --color-accent-90: oklch(from var(--theme-accent) 0.55 0.20 h );
+   --color-accent-10: oklch(from var(--theme-accent) 0.95 0.04 h );
+   --color-accent-20: oklch(from var(--theme-accent) 0.90 0.08 h );
+   --color-accent-30: oklch(from var(--theme-accent) 0.85 0.12 h );
+   --color-accent-40: oklch(from var(--theme-accent) 0.80 0.25 h );
+   --color-accent-50: oklch(from var(--theme-accent) 0.75 0.24 h );
+   --color-accent-60: oklch(from var(--theme-accent) 0.70 0.23 h );
+   --color-accent-70: oklch(from var(--theme-accent) 0.65 0.22 h );
+   --color-accent-80: oklch(from var(--theme-accent) 0.60 0.21 h );
+   --color-accent-90: oklch(from var(--theme-accent) 0.55 0.20 h );
 
-  --n-0: light-dark(var(--color-gray-0), var(--color-gray-100));
-  --n-10: light-dark(var(--color-gray-10), var(--color-gray-90));
-  --n-20: light-dark(var(--color-gray-20), var(--color-gray-80));
-  --n-30: light-dark(var(--color-gray-30), var(--color-gray-70));
-  --n-40: light-dark(var(--color-gray-40), var(--color-gray-60));
-  --n-50: light-dark(var(--color-gray-50), var(--color-gray-50));
-  --n-60: light-dark(var(--color-gray-60), var(--color-gray-40));
-  --n-70: light-dark(var(--color-gray-70), var(--color-gray-30));
-  --n-80: light-dark(var(--color-gray-80), var(--color-gray-20));
-  --n-90: light-dark(var(--color-gray-90), var(--color-gray-10));
-  --n-100: light-dark(var(--color-gray-100), var(--color-gray-0));    
+   --n-0: light-dark(var(--color-gray-0), var(--color-gray-100));
+   --n-10: light-dark(var(--color-gray-10), var(--color-gray-90));
+   --n-20: light-dark(var(--color-gray-20), var(--color-gray-80));
+   --n-30: light-dark(var(--color-gray-30), var(--color-gray-70));
+   --n-40: light-dark(var(--color-gray-40), var(--color-gray-60));
+   --n-50: light-dark(var(--color-gray-50), var(--color-gray-50));
+   --n-60: light-dark(var(--color-gray-60), var(--color-gray-40));
+   --n-70: light-dark(var(--color-gray-70), var(--color-gray-30));
+   --n-80: light-dark(var(--color-gray-80), var(--color-gray-20));
+   --n-90: light-dark(var(--color-gray-90), var(--color-gray-10));
+   --n-100: light-dark(var(--color-gray-100), var(--color-gray-0));    
 
-  --p-10: light-dark(var(--color-primary-10), var(--color-primary-90));
-  --p-20: light-dark(var(--color-primary-20), var(--color-primary-80));
-  --p-30: light-dark(var(--color-primary-30), var(--color-primary-70));
-  --p-40: light-dark(var(--color-primary-40), var(--color-primary-60));
-  --p-50: light-dark(var(--color-primary-50), var(--color-primary-50));
-  --p-60: light-dark(var(--color-primary-60), var(--color-primary-40));
-  --p-70: light-dark(var(--color-primary-70), var(--color-primary-30));
-  --p-80: light-dark(var(--color-primary-80), var(--color-primary-20));
-  --p-90: light-dark(var(--color-primary-90), var(--color-primary-10));
+   --p-10: light-dark(var(--color-primary-10), var(--color-primary-90));
+   --p-20: light-dark(var(--color-primary-20), var(--color-primary-80));
+   --p-30: light-dark(var(--color-primary-30), var(--color-primary-70));
+   --p-40: light-dark(var(--color-primary-40), var(--color-primary-60));
+   --p-50: light-dark(var(--color-primary-50), var(--color-primary-50));
+   --p-60: light-dark(var(--color-primary-60), var(--color-primary-40));
+   --p-70: light-dark(var(--color-primary-70), var(--color-primary-30));
+   --p-80: light-dark(var(--color-primary-80), var(--color-primary-20));
+   --p-90: light-dark(var(--color-primary-90), var(--color-primary-10));
 
-  --a-10: light-dark(var(--color-accent-10), var(--color-accent-90));
-  --a-20: light-dark(var(--color-accent-20), var(--color-accent-80));
-  --a-30: light-dark(var(--color-accent-30), var(--color-accent-70));
-  --a-40: light-dark(var(--color-accent-40), var(--color-accent-60));
-  --a-50: light-dark(var(--color-accent-50), var(--color-accent-50));
-  --a-60: light-dark(var(--color-accent-60), var(--color-accent-40));
-  --a-70: light-dark(var(--color-accent-70), var(--color-accent-30));
-  --a-80: light-dark(var(--color-accent-80), var(--color-accent-20));
-  --a-90: light-dark(var(--color-accent-90), var(--color-accent-10));  
-
-}
-
-
-.back-button {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 0.75rem 1.5rem;
-  background-color: var(--n-20);
-  border: 1px solid var(--n-30);
-  border-radius: 8px;
-  color: var(--n-70);
-  font-size: 0.9rem;
-  cursor: pointer;
-  transition: all 0.2s ease;
-
-  &:hover {
-    background-color: var(--n-30);
-    color: var(--n-90);
-  }
-}
-
-[content-html] {
-  h2 {
-    font-size: 1.8rem;
-    color: var(--p-90);
-    margin: 2rem 0 1rem;
-    line-height: 1.3;
-
-    &:first-child {
-      margin-top: 0;
-    }
-  }
-
-  h3 {
-    font-size: 1.4rem;
-    color: var(--p-80);
-    margin: 1.5rem 0 1rem;
-    line-height: 1.3;
-  }
-
-  p {
-    margin: 0 0 1.5rem;
-    white-space: pre-line;
-    color: var(--n-80);
-
-    &:last-child {
-      margin-bottom: 0;
-    }
-  }
-
-  ul, ol {
-    margin: 1.5rem 0;
-    padding-left: 2rem;
-    color: var(--n-80);
-
-    li {
-      margin-bottom: 0.5rem;
-
-      &:last-child {
-        margin-bottom: 0;
-      }
-    }
-  }
-
-  strong {
-    color: var(--n-90);
-    font-weight: 600;
-  }
-
-  pre {
-    background: var(--n-90);
-    padding: .5rem .5rem .5rem;
-    border-radius: 4px;
-    overflow: hidden;
-    position: relative;
-    box-shadow: 0 2px 8px var(--shadow-dark);
-    border: 1px solid var(--n-80);
-    line-height: 1.2;
-
-    code {
-      font-family: 'Fira Code', 'Consolas', monospace;
-      font-size: 0.95rem;
-      color: var(--n-20);
-      display: block;
-      overflow-x: auto;
-
-      // Style each line of code
-      > span {
-        white-space: pre;
-      }
-
-      // Syntax highlighting using direct descendant selectors
-      span[class*="keyword"] { color: var(--a-40); }
-      span[class*="function"] { color: var(--p-30); }
-      span[class*="string"] { color: var(--p-50); }
-      span[class*="comment"] { color: var(--n-40); font-style: italic; }
-      span[class*="number"] { color: var(--p-70); }
-      span[class*="operator"] { color: var(--a-40); }
-      span[class*="punctuation"] { color: var(--n-30); }
-    }
-  }
+   --a-10: light-dark(var(--color-accent-10), var(--color-accent-90));
+   --a-20: light-dark(var(--color-accent-20), var(--color-accent-80));
+   --a-30: light-dark(var(--color-accent-30), var(--color-accent-70));
+   --a-40: light-dark(var(--color-accent-40), var(--color-accent-60));
+   --a-50: light-dark(var(--color-accent-50), var(--color-accent-50));
+   --a-60: light-dark(var(--color-accent-60), var(--color-accent-40));
+   --a-70: light-dark(var(--color-accent-70), var(--color-accent-30));
+   --a-80: light-dark(var(--color-accent-80), var(--color-accent-20));
+   --a-90: light-dark(var(--color-accent-90), var(--color-accent-10));  
+ 
 }
