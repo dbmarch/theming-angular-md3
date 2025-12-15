@@ -41,9 +41,29 @@
         gap: 2rem;
 
 
+        @include  mat.card-overrides((
+            subtitle-text-color: var(--mat-sys-tertiary),
+            elevated-container-color: var(--mat-sys-primary-fixed)
+
+        ));
+
+
+
         mat-card {
             width: 300px;
+            
+            mat-card-title {
+                color:purple;
+            }
 
+            mat-icon[mat-card-avatar] { 
+                // --mat-icon-color: var(--mat-sys-primary);
+                @include mat.icon-overrides((
+                    color: var(--mat-sys-tertiary),
+                ))
+            }
+            
+            
             img[mat-card-image] {
                 height: 240px;
                 object-fit: cover;
@@ -51,6 +71,7 @@
 
             p {
                 margin: 1rem 0;
+                color: var(--mat-sys-on-primary-fixed);
             }
         }
     }
