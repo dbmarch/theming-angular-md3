@@ -1,21 +1,32 @@
 @use '@angular/material' as mat;
 
+
 :host {
     display: flex;
     flex-direction: column;
 
     mat-toolbar {
+        @include mat.toolbar-overrides((
+            container-background-color: var(--mat-sys-primary-container),
+            // container-text-color: var(--mat-sys-primary),
+        ));
+
+         @include mat.icon-overrides((
+            color: var(--mat-sys-primary)
+        ));
+
+        font: var(--mat-sys-label-large);
         .example-spacer {
             flex: 1 1 auto;
         }
     }
 
-    h1 {
-        color: var(--mat-sys-primary);
-        font: var(--mat-sys-headline-medium);
-        margin: 0 1rem;
+    // h1 {
+    //     color: var(--mat-sys-primary);
+    //     font: var(--mat-sys-headline-medium);
+    //     margin: 0 1rem;
         
-    }
+    // }
 
     .btw {
         // --mat-sys-primary-container: pink;

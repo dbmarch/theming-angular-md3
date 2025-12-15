@@ -32,3 +32,22 @@ body {
     density: 0,
   ));
 }
+
+.tertiary {
+  @include mat.theme((
+    color: mat.$rose-palette
+  ));
+}
+
+
+  .error {
+  @include mat.theme((
+    color: mat.$red-palette
+  ));
+  }
+
+   .success {
+  @include mat.theme((
+    color: mat.$green-palette
+  ));
+  }
