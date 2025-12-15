@@ -21,12 +21,16 @@
         }
     }
 
-    // h1 {
-    //     color: var(--mat-sys-primary);
-    //     font: var(--mat-sys-headline-medium);
-    //     margin: 0 1rem;
+    h1 {
+        color: var(--mat-sys-primary);
+        font: var(--mat-sys-headline-medium);
+        margin: 0 1rem;
+
+        @include mat.button-overrides((
+            filled-container-shape: 4px
+            ));
+    }
         
-    // }
 
     .btw {
         // --mat-sys-primary-container: pink;
@@ -53,7 +57,7 @@
         gap: 2rem;
 
         color: var(--mat-sys-secondary);
-
+        
         @include mat.card-overrides((
             subtitle-text-color: var(--mat-sys-tertiary),
             elevated-container-color: var(--mat-sys-primary-fixed)

@@ -19,8 +19,9 @@ body {
   padding: 0;
 }
 
-
-
+h1 {
+  color: var(--mat-sys-primary);
+}
 :root {
   @include mat.theme((
     color: (
@@ -33,20 +34,20 @@ body {
   ));
 }
 
-.tertiary {
+.tertiary, [color="tertiary"], [color="accent"]{
   @include mat.theme((
     color: mat.$rose-palette
   ));
 }
 
 
-  .error {
+  .error, [color="error"], [color="warn"]{
   @include mat.theme((
     color: mat.$red-palette
   ));
   }
 
-   .success {
+   .success, [color="success"]{
   @include mat.theme((
     color: mat.$green-palette
   ));
