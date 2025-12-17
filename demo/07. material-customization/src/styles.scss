@@ -33,13 +33,15 @@ p {
     ),
     typography: (
       plain-family: Roboto,
-      brand-family: Roboto,
-      regular-weight: 100,
-      medium-weight: 700,
+       brand-family: Segoe UI,
+       bold-weight: 900,
+       medium-weight: 700,
+       regular-weight: 400,
     ),
     density: 0,
   ));
 }
+
 
 .primary, [color="primary"] {
   @include mat.theme((

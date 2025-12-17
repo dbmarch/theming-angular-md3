@@ -1,0 +1,11 @@
+@mixin go() {
+   @font-face {
+      font-family: 'Roboto';
+      src: url('/fonts/roboto.woff') format ('woff');
+      src: url('/fonts/roboto.woff2') format ('woff2');
+      src: url('/fonts/roboto.ttf') format ('truetype');
+      font-weight: 100 400 700 900;
+      font-style: normal;
+      font-display: swap;
+   }
+}

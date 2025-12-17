@@ -28,7 +28,33 @@ body {
       primary: mat.$azure-palette,
       tertiary: mat.$rose-palette,
     ),
-    typography: Roboto,
+    typography: Roboto
+    // typography: (
+    //   plain-family: Roboto,
+    //   brand-family: Segoe UI,
+    //   bold-weight: 900,
+    //   medium-weight: 700,
+    //   regular-weight: 400,
+    // ),
     density: 0,
   ));
+}
+
+[color = "accent"] {
+  @include mat.theme((
+    color: mat.$rose-palette
+  ))
+}
+
+
+.success, [color = "success"] {
+  @include mat.theme((
+    color: mat.$green-palette
+  ))
+}
+
+.error, [color = "warn"] {
+  @include mat.theme((
+    color: mat.$red-palette
+  ))
 }
