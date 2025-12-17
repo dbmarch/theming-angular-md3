@@ -1,7 +1,7 @@
 @mixin go() {
     @font-face {
         font-family: 'Roboto';
-      //   src: url('/fonts/Roboto.woff2') format('woff2');
+        src: url('/fonts/Roboto.woff2') format('woff2');
         src: url('/fonts/roboto.woff') format('woff');
         font-weight: 100 200 300 400 700 900;
         font-style: normal;
